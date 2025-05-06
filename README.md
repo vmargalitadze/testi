@@ -23,7 +23,7 @@
 - პროფილი: [https://fakestoreapi.com/users/3](https://fakestoreapi.com/users/3)
 - კალათა: [https://fakestoreapi.com/carts/1](https://fakestoreapi.com/carts/1)
 
-## 🛠️ ფუნქციონალი
+##  ფუნქციონალი
 
 - პროდუქტების ჩამონათვალი და დეტალური გვერდი
 - პროფილის ჩვენება
