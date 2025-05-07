@@ -27,10 +27,10 @@ function Slider() {
             key={slide.id}
           >
             <div className="h-1/2 xl:w-1/2 xl:h-full lg:mt-0 mt-4 flex flex-col items-center justify-center gap-8 2xl:gap-12 text-center">
-              <h2 className="text-xl lg:text-2xl 2xl:text-3xl">
+              <h2 className="text-xl lg:text-2xl text-black 2xl:text-3xl">
                 {slide.description}
               </h2>
-              <h1 className="text-2xl lg:text-4xl 2xl:text-6xl font-semibold">
+              <h1 className="text-2xl text-black lg:text-4xl 2xl:text-6xl font-semibold">
                 {slide.title}
               </h1>
             </div>
