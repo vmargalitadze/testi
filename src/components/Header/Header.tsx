@@ -1,9 +1,10 @@
+"use client";
 import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import {  FaUser, FaShoppingCart } from 'react-icons/fa';
 import SearchHelper from './SearchHelper';
-
+import Button from './Button';
 function Header() {
   return (
     <header className="bg-[#232F3E] sticky top-0 z-50 text-white">
@@ -25,12 +26,9 @@ function Header() {
               priority
             />
           </Link>
-          <div className="hidden xl:inline text-sm text-white/80">
-            ლოკაცია
-          </div>
+         <Button />
         </div>
 
-        {/* Right: Search & Icons */}
         <div className="flex items-center gap-6">
        <SearchHelper />
 
