@@ -22,7 +22,7 @@ async function Page({ params }: { params: { id: string } }) {
             </div>
             <div className="lg:max-w-[635px] w-full">
               <div className="pb-4 sm:pb-6 border-b border-bdr-clr border-bdr-clr-drk">
-                <h2 className="font-semibold pb-5 text-3xl leading-none tracking-tight text-title text-black">
+                <h2 className="font-semibold pb-5 text-3xl leading-none tracking-tight text-title ">
                   {data.title}
                 </h2>
 
@@ -38,7 +38,7 @@ async function Page({ params }: { params: { id: string } }) {
                   კატეგორია: {data.category}
                 </span>
 
-                <p className="text-base pb-5 md:text-lg leading-6 font-normal text-title text-black mt-2">
+                <p className="text-base pb-5 md:text-lg leading-6 font-normal text-title  mt-2">
                   {data.description}
                 </p>
               </div>
@@ -46,21 +46,21 @@ async function Page({ params }: { params: { id: string } }) {
               <div className="py-5 sm:py-6  ">
               <div className="flex items-center gap-3">
                   <div className="inc-dec flex items-center gap-2">
-                    <div className="dec w-8 h-8 bg-[#E8E9EA] bg-dark-secondary flex items-center justify-center">
+                    <div className="dec w-8 h-8  flex items-center justify-center">
                       <button className="cursor-pointer" >  <span className="text-2xl"> - </span> </button>
                     </div>
                   </div>
 
                   <div> 0 </div>
 
-                  <div className="inc w-8 h-8 bg-[#E8E9EA] bg-dark-secondary flex items-center justify-center">
+                  <div className="inc w-8 h-8 ]  flex items-center justify-center">
                     <button className="cursor-pointer" ><span className="text-2xl"> + </span></button>
                   </div>
                 </div>
                 <div className="flex items-center gap-3"></div>
 
                 <div className="flex gap-5 mt-4 sm:mt-6">
-                  <button className="rounded-lg cursor-pointer px-4 py-2 bg-gray-200 hover:bg-gray-300 duration-300">
+                  <button className="rounded-lg cursor-pointer px-4 py-2 text-gray-100 bg-gray-900 hover:bg-gray-300 duration-300">
                     Add to cart
                   </button>
                   <button className="rounded-lg cursor-pointer px-4 py-2 bg-gray-900 text-gray-100">

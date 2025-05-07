@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import {  Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
-
+import { ThemeProvider } from "next-themes";
 const roboto = Roboto({
   variable: "--font-roboto",
   subsets: ["latin"],
@@ -20,12 +20,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${roboto.variable}  antialiased`}
       >
+            <ThemeProvider 
+        attribute='class'
+        defaultTheme="light"
+        enableSystem
+        disableTransitionOnChange
+        >
+
+
         <Header />
         {children}
+        </ThemeProvider>
       </body>
     </html>
   );
