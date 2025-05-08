@@ -1,5 +1,6 @@
 
 import Image from "next/image";
+import Helper from "../Helper";
 async function Page({ params }: { params: { id: string } }) {
   const { id } = await params;
 
@@ -44,19 +45,7 @@ async function Page({ params }: { params: { id: string } }) {
               </div>
 
               <div className="py-5 sm:py-6  ">
-              <div className="flex items-center gap-3">
-                  <div className="inc-dec flex items-center gap-2">
-                    <div className="dec w-8 h-8  flex items-center justify-center">
-                      <button className="cursor-pointer" >  <span className="text-2xl"> - </span> </button>
-                    </div>
-                  </div>
-
-                  <div> 0 </div>
-
-                  <div className="inc w-8 h-8 ]  flex items-center justify-center">
-                    <button className="cursor-pointer" ><span className="text-2xl"> + </span></button>
-                  </div>
-                </div>
+           <Helper />
                 <div className="flex items-center gap-3"></div>
 
                 <div className="flex gap-5 mt-4 sm:mt-6">
