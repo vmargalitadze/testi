@@ -1,4 +1,5 @@
 /* eslint-disable prefer-const */
+
 import Image from "next/image";
 
 const fetchCart = async (id: string) => {
