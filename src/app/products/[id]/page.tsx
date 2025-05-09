@@ -1,23 +1,23 @@
-
 import Image from "next/image";
-import Helper from "../Helper";
+
+import Quantity from "@/app/cart/Quantity";
 async function Page({ params }: { params: { id: string } }) {
   const { id } = await params;
 
   const res = await fetch(`https://fakestoreapi.com/products/${id}`);
   const data = await res.json();
 
-
   return (
     <>
-      <div className="mt-20">
+      <div className="mt-20 mb-20">
         <div className="container">
           <div className="mx-auto flex justify-between gap-6 lg:gap-8 flex-col lg:flex-row">
-            <div className="w-full lg:w-[58%] relative min-h-[300px] sm:min-h-[400px]">
+            <div className=" lg:w-[58%] ">
               <Image
                 src={data.image}
                 alt={data.title}
-                fill
+                width={1200}
+                height={500}
                 className="object-cover rounded-md"
               />
             </div>
@@ -45,7 +45,7 @@ async function Page({ params }: { params: { id: string } }) {
               </div>
 
               <div className="py-5 sm:py-6  ">
-           <Helper />
+                <Quantity />
                 <div className="flex items-center gap-3"></div>
 
                 <div className="flex gap-5 mt-4 sm:mt-6">

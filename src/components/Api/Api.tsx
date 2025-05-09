@@ -39,7 +39,7 @@ function Api() {
                     src={item.image}
                     alt={item.title}
                     fill
-                    className=" object-cover rounded-lg"
+                    className="object-contain rounded-lg"
                   />
                 </Link>
                 </div>

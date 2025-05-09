@@ -12,9 +12,9 @@ async function Page() {
   return (
     <>
      <div className="p-8">
-      <h1 className="text-2xl font-bold mb-6">მომხმარებელი</h1>
 
       <div className="container mx-auto">
+      <h1 className="text-2xl font-bold mb-6">მომხმარებელი</h1>
             <div className="flex flex-col md:flex-row lg:flex-row lg:gap-x-[100px]">
           
               <div className="flex-1 order-1 lg:-order-1">
