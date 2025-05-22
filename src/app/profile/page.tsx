@@ -1,13 +1,16 @@
 import Image from "next/image";
-
+import { auth } from '@/auth'
+import { redirect } from "next/navigation";
 async function Page() {
 
 
 
  
  const res = await fetch(`https://fakestoreapi.com/users/1`);
- const user = await res.json();
-
+ const users = await res.json();
+  const session = await auth()
+  if (!session) redirect('/login')
+    console.log(session);
 
   return (
     <>
@@ -29,22 +32,22 @@ async function Page() {
 
               <div className="flex-1 flex flex-col gap-y-5 justify-start">
                 <p className="text-[16px] lg:text-[25px] leading-tight text-start  font-semibold">
-                სახელი: {user.name.firstname}
+                სახელი: {session.user?.firstName}
                 </p>
                 <p className="text-[16px] lg:text-[20px] leading-tight text-start  font-semibold">
-                გვარი: {user.name.lastname}
+                გვარი: {session.user?.lastName}
                 </p>
                 <p className="text-[16px] lg:text-[20px] leading-tight text-start  font-semibold">
-                ქალაქი: {user.address.city}
+                ქალაქი: {users.address.city}
                 </p>
                 <p className="text-[16px] lg:text-[20px] leading-tight text-start  font-semibold">
-                ქუჩა: {user.address.street}
+                ქუჩა: {users.address.street}
                 </p>
                 <p className="text-[16px] lg:text-[20px] leading-tight text-start  font-semibold">
-                ემეილი: {user.email}
+                ემეილი: {session.user?.email}
                 </p>
                 <p className="text-[16px] lg:text-[20px] leading-tight text-start  font-semibold">
-                ტელ: {user.phone}
+                ტელ: {users.phone}
                 </p>
               </div>
             </div>

@@ -3,6 +3,7 @@ import {  Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import { ThemeProvider } from "next-themes";
+
 import Footer from "@/components/Footer/Footer";
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body
         className={`${roboto.variable}  antialiased`}
       >
+        
             <ThemeProvider 
         attribute='class'
         defaultTheme="light"
