@@ -10,7 +10,7 @@ async function Page() {
  const users = await res.json();
   const session = await auth()
   if (!session) redirect('/login')
-    console.log(session);
+
 
   return (
     <>
