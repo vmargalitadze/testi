@@ -35,9 +35,9 @@ function SignupForm() {
   useEffect(() => {
     if (state?.success) {
       setRedirecting(true);
-      router.push( "/login");
+      router.push("/login");
     }
-  }, [state,  router]);
+  }, [state, router]);
 
   return (
     <form
@@ -122,8 +122,6 @@ function SignupForm() {
           ? "Submitting..."
           : "Sign Up"}
       </Button>
-
-    
     </form>
   );
 }

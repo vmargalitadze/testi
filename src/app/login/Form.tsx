@@ -9,14 +9,14 @@ type LoginFormState = {
   success: boolean;
   message: string;
   email: string;
-  errors: Record<string, string>;  // აღარ არის "optional" ან "undefined"
+  errors: Record<string, string>;
 };
 
 const initialState: LoginFormState = {
   success: false,
   message: "",
   email: "",
-  errors: {}, // ცარიელი ობიექტი შეცდომებისთვის
+  errors: {},
 };
 
 function LoginForm() {
