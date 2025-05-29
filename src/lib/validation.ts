@@ -34,12 +34,35 @@ export const SignUpSchema = yup.object().shape({
 const currency = yup
   .string()
   .test(
-    'is-decimal',
-    'Price must have exactly two decimal places',
-    (value) => value !== undefined && /^\d+(\.\d{2})?$/.test(formatNumberWithDecimal(Number(value)))
+    "is-decimal",
+    "Price must have exactly two decimal places",
+    (value) =>
+      value !== undefined &&
+      /^\d+(\.\d{2})?$/.test(formatNumberWithDecimal(Number(value)))
   );
 
+export const insertProductSchema = yup.object({
+  name: yup
+    .string()
+    .min(3, "Name must be at least 3 characters")
+    .required("Name is required"),
 
+  description: yup
+    .string()
+    .min(10, "Description must be at least 10 characters")
+    .required("Description is required"),
+
+  images: yup
+    .array()
+    .of(yup.string().required())
+    .min(1, "Product must have at least one image"),
+
+  price: yup.string().required("Price is required"),
+});
+
+export const updateProductSchema = insertProductSchema.shape({
+  id: yup.string().required("Id is required"),
+});
 
 export const cartItemSchema = yup.object({
   productId: yup.string().required("Product is required"),
