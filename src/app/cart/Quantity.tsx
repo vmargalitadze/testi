@@ -19,9 +19,9 @@ function Quantity() {
 
       <div className="mx-2 border text-center w-8">{quantity}</div>
 
-       <button className="cursor-pointer" onClick={increment}>
-          <span className="text-2xl"> + </span>
-        </button>
+      <button className="cursor-pointer" onClick={increment}>
+        <span className="text-2xl"> + </span>
+      </button>
     </div>
   );
 }

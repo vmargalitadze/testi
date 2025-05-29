@@ -1,12 +1,14 @@
 import Image from "next/image";
 
 import Quantity from "@/app/cart/Quantity";
-async function Page({ params }: { params: { id: string } }) {
-  const { id } = await params;
+
+import React from "react";
+
+const DetailPage = async (props: { params: Promise<{ id: string }> }) => {
+  const { id } = await props.params;
 
   const res = await fetch(`https://fakestoreapi.com/products/${id}`);
   const data = await res.json();
-
   return (
     <>
       <div className="mt-20 mb-20">
@@ -63,6 +65,6 @@ async function Page({ params }: { params: { id: string } }) {
       </div>
     </>
   );
-}
+};
 
-export default Page;
+export default DetailPage;
