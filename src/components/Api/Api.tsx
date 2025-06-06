@@ -28,7 +28,7 @@ function Api() {
 
   return (
     <>
-      <div className="mt-28 mb-14">
+      <div className="mt-24 mb-14">
         <section className="mx-auto px-4 container">
           <h2 className="lg:text-4xl text-3xl font-bold mb-6 xs:text-xl text-center mt-8">
             პროდუქტები
