@@ -52,9 +52,9 @@ function Api() {
 
                 <div className="flex justify-between">
                   <Link href={`/products/${product.id}`}>
-                    <h3 className="font-sans text-2xl font-bold">{product.name}</h3>
+                    <h3 className="font-sans text-xl font-bold">{product.name}</h3>
                   </Link>
-                  <span className="text-2xl font-bold font-mono">
+                  <span className="text-[17px] font-bold font-mono">
                     ${Number(product.price).toFixed(2)}
                   </span>
                 </div>
