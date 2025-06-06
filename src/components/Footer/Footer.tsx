@@ -11,7 +11,7 @@ function Footer() {
       <li className="mx-2"><Link href="#" className=" py-2 px-3"> <FaInstagram className='w-8 h-8'/> </Link></li>
     </ul>
     <hr className="my-4" />
-    <p className="text-center text-xl text-white">&copy; 2025  Created By Vaqsi</p>
+    <p className="text-center text-[18px] text-white">&copy; 2025  Created By Vaqsi</p>
   </div>
 </footer>
   )
