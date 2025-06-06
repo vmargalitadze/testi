@@ -30,7 +30,7 @@ function Api() {
     <>
       <div className="mt-24 mb-14">
         <section className="mx-auto flex flex-col items-center px-4 max-w-7xl">
-          <h2 className="text-2xl text-black lg:text-4xl 2xl:text-6xl font-bold mb-6 text-center mt-8">
+          <h2 className="text-2xl text-black lg:text-4xl 2xl:text-6xl font-bold mb-6 text-center ">
             Products
           </h2>
 
@@ -53,7 +53,7 @@ function Api() {
 
                 <div className="flex flex-col text-center justify-between">
                   <Link href={`/products/${product.id}`}>
-                    <h3 className="font-sans text-[24px] font-bold">
+                    <h3 className="font-sans uppercase text-[24px] font-bold">
                       {product.name}
                     </h3>
                   </Link>
