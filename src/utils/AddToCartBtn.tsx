@@ -25,7 +25,7 @@ const AddToCartBtn = (props: Props) => {
   if (!qty)
     return (
       <div className="flex justify-center">
-        <Button className="cursor-pointer" onClick={() => dispatch(increment(props.product))}>
+        <Button className="cursor-pointer w-full text-[18px]  uppercase" onClick={() => dispatch(increment(props.product))}>
           Add To Cart
         </Button>
       </div>

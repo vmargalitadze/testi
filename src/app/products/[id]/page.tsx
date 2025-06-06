@@ -17,7 +17,6 @@ const DetailPage = async (props: { params: Promise<{ id: string }> }) => {
   const { id } = await props.params;
   const product = (await getProductById(id)) as Product;
 
-  
   if (!product) {
     return (
       <div className="mt-20 mb-20 container mx-auto">
@@ -47,21 +46,21 @@ const DetailPage = async (props: { params: Promise<{ id: string }> }) => {
                 </h2>
 
                 <p className="text-2xl pb-5 sm:text-3xl leading-none block">
-                  ფასი: ${Number(product.price).toFixed(2)}
+                  price: ${Number(product.price).toFixed(2)}
                 </p>
 
-                <p className="text-base pb-5 md:text-lg leading-6 font-normal text-title mt-2">
+                <p className="text-base pb-5 uppercase md:text-lg leading-6 font-normal text-title mt-2">
                   {product.description}
                 </p>
               </div>
 
               <div className="py-5 sm:py-6">
-      
-                <div className="flex items-center gap-3"></div>
+                <div className="flex  items-center gap-3"></div>
 
-                <div className="flex gap-5 mt-4 sm:mt-6">
-                  <AddToCartBtn product={product} />
-                 
+                <div className="flex gap-5 w-[170px] mt-4 sm:mt-6">
+                  <div className="w-full">
+                    <AddToCartBtn product={product} />
+                  </div>
                 </div>
               </div>
             </div>

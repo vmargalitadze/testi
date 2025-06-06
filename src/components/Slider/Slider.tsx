@@ -47,7 +47,7 @@ function Slider() {
           </div>
         ))}
       </div>
-      <div className="absolute bottom-[100px] left-1/2 -translate-x-1/2 flex items-center justify-center mx-auto gap-4">
+      <div className="absolute bottom-[100px]  right-1/2 -translate-x-1/2 flex items-center justify-center  gap-4">
         {slides.map((slide, index) => (
           <div
             className={`w-3 h-3   rounded-full ring-1 ring-gray-600 cursor-pointer flex items-center justify-center ${
