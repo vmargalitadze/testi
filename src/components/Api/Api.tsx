@@ -28,7 +28,7 @@ function Api() {
 
   return (
     <>
-      <div className="mt-24 mb-14">
+      <div className="mt-16 mb-14">
         <section className="mx-auto flex flex-col items-center px-4 max-w-7xl">
           <h2 className="text-2xl text-black lg:text-4xl 2xl:text-6xl font-bold mb-6 text-center ">
             Products

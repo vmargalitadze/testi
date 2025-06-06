@@ -30,7 +30,7 @@ function Slider() {
               <h2 className="text-xl lg:text-2xl text-black 2xl:text-3xl">
                 {slide.description}
               </h2>
-              <h1 className="text-2xl text-black lg:text-4xl 2xl:text-6xl font-semibold">
+              <h1 className="text-2xl text-black lg:text-4xl 2xl:text-6xl font-bold  text-center ">
                 {slide.title}
               </h1>
             </div>
