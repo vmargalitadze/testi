@@ -28,9 +28,9 @@ function Api() {
 
   return (
     <>
-      <div className="mt-36 mb-14">
+      <div className="mt-28 mb-14">
         <section className="mx-auto px-4 container">
-          <h2 className="lg:text-5xl mb-6 xs:text-2xl text-center mt-8">
+          <h2 className="lg:text-4xl text-3xl font-bold mb-6 xs:text-xl text-center mt-8">
             პროდუქტები
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4">
@@ -52,9 +52,9 @@ function Api() {
 
                 <div className="flex justify-between">
                   <Link href={`/products/${product.id}`}>
-                    <h3 className="font-sans font-bold">{product.name}</h3>
+                    <h3 className="font-sans text-2xl font-bold">{product.name}</h3>
                   </Link>
-                  <span className="text-base font-mono">
+                  <span className="text-2xl font-bold font-mono">
                     ${Number(product.price).toFixed(2)}
                   </span>
                 </div>

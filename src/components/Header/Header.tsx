@@ -1,21 +1,23 @@
 "use client";
 
-import React from 'react';
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
-import SearchHelper from './SearchHelper';
-import Button from './Button';
-import DropdownMenuCheckboxes from './Dropdown';
-import Toggle from './toggle';
+import SearchHelper from "./SearchHelper";
+import Button from "./Button";
+import DropdownMenuCheckboxes from "./Dropdown";
+import Toggle from "./toggle";
+import MobileMenu from "./MobileMenu";
 
 function Header() {
-  const {  status } = useSession();
+  const { status } = useSession();
 
   return (
     <header className="bg-[#232F3E] sticky top-0 z-50 text-white">
       <div className="px-5">
         <div className="flex items-center justify-between px-4 py-3 bg-amazonBlue">
+          {/* Logo & Mobile Menu Button */}
           <div className="flex items-center gap-6">
             <Link href="/">
               <Image
@@ -27,17 +29,40 @@ function Header() {
                 priority
               />
             </Link>
-            <Button />
+
+        
+            <div className="hidden md:block">
+              <Button />
+            </div>
+
+            <div className="md:hidden ml-16">
+              <MobileMenu />
+            </div>
           </div>
 
-          <div className="flex items-center gap-6">
-            <SearchHelper />
+   
+          <div className="flex items-center gap-4">
+          
+            <div className="hidden sm:block">
+              <SearchHelper />
+            </div>
+
+<div className="hidden sm:block">
+
             <Toggle />
-            { status === "authenticated" ? (
-              <DropdownMenuCheckboxes />
-            ) : (
-              <Link href="/login">Login</Link>
-            )}
+</div>
+        
+
+        
+            <div className=" sm:block">
+              {status === "authenticated" ? (
+                <DropdownMenuCheckboxes />
+              ) : (
+                <Link href="/login" className="text-sm">
+                  Login
+                </Link>
+              )}
+            </div>
           </div>
         </div>
       </div>
