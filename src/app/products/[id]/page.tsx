@@ -44,7 +44,7 @@ const DetailPage = async (props: { params: Promise<{ id: string }> }) => {
                   {product.name}
                 </h2>
 
-                <p className="text-2xl  pb-5 sm:text-3xl leading-none block">
+                <p className="text-2xl  pb-5  leading-none block">
                   price: ${Number(product.price).toFixed(2)}
                 </p>
 
