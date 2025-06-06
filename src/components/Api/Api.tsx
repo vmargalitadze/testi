@@ -58,7 +58,7 @@ function Api() {
                     </h3>
                   </Link>
                   <span className="text-[20px] mt-2 font-bold font-mono">
-                    price: ${Number(product.price).toFixed(2)}
+                     ${Number(product.price).toFixed(2)}
                   </span>
                 </div>
               </div>
