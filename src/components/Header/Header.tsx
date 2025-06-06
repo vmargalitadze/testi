@@ -35,9 +35,6 @@ function Header() {
               <Button />
             </div>
 
-            <div className="md:hidden ml-16">
-              <MobileMenu />
-            </div>
           </div>
 
    
@@ -47,6 +44,9 @@ function Header() {
               <SearchHelper />
             </div>
 
+            <div className="md:hidden ml-auto">
+              <MobileMenu />
+            </div>
 <div className="hidden sm:block">
 
             <Toggle />

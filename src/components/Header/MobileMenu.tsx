@@ -25,7 +25,7 @@ export default function MobileMenu() {
 
       <div 
         className={`
-          fixed inset-0 bg-gradient-to-b from-[#232F3E] to-[#1a2432]
+          fixed  bg-gradient-to-b from-[#232F3E] to-[#1a2432]
           flex items-center justify-center
           transform transition-all duration-300 ease-in-out
           ${open ? 'opacity-100 visible' : 'opacity-0 invisible'}
