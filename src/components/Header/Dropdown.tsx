@@ -38,7 +38,7 @@ export default function DropdownMenuCheckboxes() {
             </Button>
           </div>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-56" align="end" forceMount>
+        <DropdownMenuContent className="w-32" align="center" forceMount>
           <DropdownMenuItem>
             <Link
               href="/profile"

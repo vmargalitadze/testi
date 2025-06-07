@@ -18,15 +18,15 @@ function LoginPage() {
     <div className="w-full py-20 max-w-md mx-auto flex  justify-center">
       <Card className="w-full">
         <CardHeader className="space-y-2 text-center">
-          <CardTitle>Sign In</CardTitle>
-          <CardDescription>Sign in to your account</CardDescription>
+          <CardTitle className="text-[24px]" >Sign In</CardTitle>
+          <CardDescription className="text-[18px]" >Sign in to your account</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <Form />
         </CardContent>
         <Link
           href="/reg"
-          className="text-center font-medium underline hover:no-underline transition duration-200"
+          className="text-center uppercase font-medium underline hover:no-underline transition duration-200"
         >
          Don&#39;t have an account? Sign up
         </Link>

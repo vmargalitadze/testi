@@ -76,7 +76,7 @@ function LoginForm() {
 
       <button
         type="submit"
-        className="bg-[#232F3E] cursor-pointer text-white px-4 py-2 rounded w-full"
+        className="bg-[#232F3E]  text-[18px] uppercase  cursor-pointer text-white px-4 py-2 rounded w-full"
       >
         Sign In
       </button>

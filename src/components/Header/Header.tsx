@@ -30,16 +30,12 @@ function Header() {
               />
             </Link>
 
-        
             <div className="hidden md:block">
               <Button />
             </div>
-
           </div>
 
-   
           <div className="flex items-center gap-4">
-          
             <div className="hidden sm:block">
               <SearchHelper />
             </div>
@@ -47,13 +43,6 @@ function Header() {
             <div className="md:hidden ml-auto">
               <MobileMenu />
             </div>
-<div className="hidden sm:block">
-
-            <Toggle />
-</div>
-        
-
-        
             <div className=" sm:block">
               {status === "authenticated" ? (
                 <DropdownMenuCheckboxes />
@@ -62,6 +51,9 @@ function Header() {
                   Login
                 </Link>
               )}
+            </div>
+            <div className="hidden sm:block">
+              <Toggle />
             </div>
           </div>
         </div>
