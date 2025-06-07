@@ -114,7 +114,7 @@ function SignupForm() {
       <Button
         type="submit"
         disabled={isPending || redirecting}
-        className="w-[250px] text-[18px] uppercase cursor-pointer"
+        className="w-[250px] hover:text-amber-400 text-[18px] uppercase cursor-pointer"
       >
         {redirecting
           ? "Redirecting..."
