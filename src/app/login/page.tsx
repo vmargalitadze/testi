@@ -28,7 +28,7 @@ function LoginPage() {
           href="/reg"
           className="text-center font-medium underline hover:no-underline transition duration-200"
         >
-          არ გაქ აქაუნთი? დარეგისტრირდი
+         Don&#39;t have an account? Sign up
         </Link>
       </Card>
     </div>

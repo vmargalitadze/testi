@@ -6,11 +6,10 @@ function page() {
       <div className="pt-[70px]  pb-[70px]">
         <div className="container">
           <div className="max-w-[1720px] mx-auto grid grid-cols-1 lg:grid-cols-2 ">
-            <div className="w-full h-full">
+            <div className="lg:w-[58%] h-[500px] relative overflow-hidden rounded-md">
               <Image
-                width={860}
-                height={960}
-                className="object-cover  w-full h-full"
+                 fill
+                className="object-cover rounded-md"
                 alt="about"
                 src="/slider/1.jpg"
               />

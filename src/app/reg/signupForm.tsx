@@ -42,7 +42,7 @@ function SignupForm() {
   return (
     <form
       action={formAction}
-      className="space-y-6 bg-white p-6 rounded shadow max-w-md mx-auto mt-10"
+      className="space-y-6 bg-white p-6 rounded shadow max-w-md mx-auto "
     >
       <div>
         <Label htmlFor="firstName">First Name</Label>
