@@ -62,7 +62,7 @@ function CartPage() {
     <div className="">
       <div className="container mx-auto mt-10">
         <div className="flex shadow-md my-10">
-          <div className="w-3/4 bg-white px-10 py-10">
+          <div className="w-3/4 px-10 py-10">
             <div className="flex justify-between border-b pb-8">
               <h1 className="font-semibold uppercase text-2xl">
                 Shopping Cart
@@ -88,7 +88,7 @@ function CartPage() {
             ))}
             <Link
               href="/"
-              className="inline-flex  items-center border border-black px-3 py-1.5 rounded-md text-black hover:bg-indigo-50"
+              className="inline-flex  items-center border  px-3 py-1.5 rounded-md  hover:bg-indigo-50"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -136,7 +136,7 @@ function CartPage() {
                 className="p-2 rounded-md border border-black uppercase text-sm w-full"
               />
             </div>
-            <Button className="bg-black text-[18px] px-5 py-2  text-white cursor-pointer uppercase">
+            <Button className="bg-black text-[18px] px-5 py-2 hover:text-amber-400  text-white cursor-pointer uppercase">
               Apply
             </Button>
             <div className="border-t mt-8">
@@ -146,7 +146,7 @@ function CartPage() {
               </div>
               <Button
                 onClick={handleCheckout}
-                className="bg-black cursor-pointer text-[18px] font-semibold  py-3  text-white uppercase w-full"
+                className="bg-black cursor-pointer hover:text-amber-400 text-[18px] font-semibold  py-3  text-white uppercase w-full"
               >
                 Checkout
               </Button>

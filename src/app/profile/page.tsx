@@ -24,7 +24,7 @@ async function Page() {
             User
           </h1>
           <div className="flex flex-col md:flex-row lg:flex-row lg:gap-x-[100px]">
-            <div className="lg:w-[58%] h-[500px] relative overflow-hidden rounded-md">
+            <div className="lg:w-[40%] h-[400px] relative overflow-hidden rounded-md">
               <Image
                 alt="Profile picture"
                 fill
@@ -34,14 +34,14 @@ async function Page() {
             </div>
 
             <div className="flex-1 flex flex-col gap-y-5 justify-start">
-              <p className="text-[16px] lg:text-[18px] leading-tight text-start font-semibold">
+              <p className="text-[16px] lg:text-[24px] leading-tight text-start ">
                 <span className="uppercase">NAME:</span>
                 {session.user.firstName || "უცნობია"}
               </p>
-              <p className="text-[16px] lg:text-[18px] leading-tight text-start font-semibold">
+              <p className="text-[16px] lg:text-[24px] leading-tight text-start ">
                 SURNAME: {session.user.lastName || "უცნობია"}
               </p>
-              <p className="text-[16px]  lg:text-[18px] leading-tight text-start font-semibold">
+              <p className="text-[16px]  lg:text-[24px] leading-tight text-start ">
                 EMAIL: {session.user.email || "უცნობია"}
               </p>
             </div>
