@@ -40,7 +40,7 @@ function LoginForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-md mx-auto  space-y-6 bg-white p-6 rounded shadow"
+      className="max-w-md mx-auto uppercase space-y-6 bg-white p-6 rounded shadow"
     >
       {error && (
         <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative">
@@ -56,7 +56,7 @@ function LoginForm() {
           id="email"
           name="email"
           type="email"
-          className="border border-gray-300 rounded w-full p-2"
+          className="border uppercase border-gray-300 rounded w-full p-2"
           required
         />
       </div>
@@ -69,7 +69,7 @@ function LoginForm() {
           id="password"
           name="password"
           type="password"
-          className="border border-gray-300 rounded w-full p-2"
+          className="border uppercase border-gray-300 rounded w-full p-2"
           required
         />
       </div>

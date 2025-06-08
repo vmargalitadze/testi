@@ -3,10 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { decrement, increment, remove } from "@/components/Slices/cartSlice";
 import { useAppDispatch } from "@/store/store";
-import QtyBtn from "@/utils/QtyBtn";
 import Link from "next/link";
-import { FaTrash } from "react-icons/fa";
-import { Button } from "@/utils/Button";  
 
 interface Props {
   cartItem: CartItem;
@@ -20,59 +17,35 @@ const CartItemCard = ({ cartItem }: Props) => {
   };
 
   return (
-    <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-0 py-6 px-2 sm:px-6">
-      {/* Product Image and Name */}
-      <div className="flex flex-col sm:flex-row items-center sm:items-start w-full sm:w-2/5 gap-4">
-        <div className="w-24 h-24 relative">
+    <div className="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
+      <div className="flex w-2/5">
+        <div className="w-20">
           <Image
-            fill
-            className="object-cover rounded-lg"
+            width={80}
+            height={96}
+            className="h-24"
             src={cartItem.product.images[0]}
             alt={cartItem.product.name}
           />
         </div>
-        <div className="flex flex-col items-center sm:items-start">
-          <Link href={`/products/${cartItem.product.id}`}>
-            <span className="font-bold text-base text-center sm:text-left">
-              {cartItem.product.name}
-            </span>
-          </Link>
+        <div className="flex flex-col justify-between ml-4 flex-grow">
+          <span className="font-bold text-sm">{cartItem.product.name}</span>
+          <a onClick={handleRemove} href="#" className="font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
         </div>
       </div>
+      <div className="flex justify-center w-1/5">
+        <svg onClick={() => dispatch(decrement(cartItem.product))} className="fill-current text-gray-600 w-3 cursor-pointer" viewBox="0 0 448 512">
+          <path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
+        </svg>
 
-      {/* Quantity Controls */}
-      <div className="flex items-center justify-center w-full sm:w-1/5">
-        <QtyBtn
-          qty={cartItem.qty}
-          onDecrease={() => dispatch(decrement(cartItem.product))}
-          onIncrease={() => dispatch(increment(cartItem.product))}
-        />
+        <input className="mx-2 border text-center w-8" type="text" value={cartItem.qty} readOnly />
+
+        <svg onClick={() => dispatch(increment(cartItem.product))} className="fill-current text-gray-600 w-3 cursor-pointer" viewBox="0 0 448 512">
+          <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
+        </svg>
       </div>
-
-      {/* Price */}
-      <div className="flex flex-col sm:flex-row gap-2 sm:gap-0 items-center justify-between w-full sm:w-2/5">
-        <div className="flex items-center gap-2 sm:w-1/2">
-          <span className="text-gray-600 text-sm sm:hidden">ფასი:</span>
-          <span className="font-semibold text-base">
-            ${cartItem.product.price.toString()}
-          </span>
-        </div>
-
-        <div className="flex items-center gap-2 sm:w-1/2">
-          <span className="text-gray-600 text-sm sm:hidden">ჯამი:</span>
-          <span className="font-semibold text-base">
-            ${(Number(cartItem.qty) * Number(cartItem.product.price)).toFixed(2)}
-          </span>
-        </div>
-
-        {/* Delete Button */}
-        <Button
-          onClick={handleRemove}
-          className="text-red-500 hover:text-red-700 transition-colors duration-200"
-        >
-          <FaTrash className="w-5 h-5" />
-        </Button>
-      </div>
+      <span className="text-center w-1/5 font-semibold text-sm">${cartItem.product.price.toString()}</span>
+      <span className="text-center w-1/5 font-semibold text-sm">${(Number(cartItem.qty) * Number(cartItem.product.price)).toFixed(2)}</span>
     </div>
   );
 };

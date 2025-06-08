@@ -42,11 +42,12 @@ function SignupForm() {
   return (
     <form
       action={formAction}
-      className="space-y-6 w-[300px] bg-white p-6 rounded shadow max-w-md mx-auto "
+      className="space-y-6 w-[300px] uppercase bg-white p-6 rounded shadow max-w-md mx-auto "
     >
       <div>
         <Label htmlFor="firstName">First Name</Label>
         <Input
+          className="uppercase"
           id="firstName"
           name="firstName"
           type="text"
@@ -63,6 +64,7 @@ function SignupForm() {
           id="lastName"
           name="lastName"
           type="text"
+          className="uppercase"
           defaultValue={signUpDefaultValues.lastName}
         />
         {state?.errors?.lastName && (
@@ -78,6 +80,7 @@ function SignupForm() {
           name="email"
           type="email"
           autoComplete="email"
+          className="uppercase"
         />
         {state?.errors?.email && (
           <p className="text-sm text-red-500">{state.errors.email}</p>
@@ -92,6 +95,7 @@ function SignupForm() {
           name="password"
           type="password"
           autoComplete="new-password"
+          className="uppercase"
         />
         {state?.errors?.password && (
           <p className="text-sm text-red-500">{state.errors.password}</p>
@@ -104,6 +108,7 @@ function SignupForm() {
           id="confirmPassword"
           name="confirmPassword"
           type="password"
+          className="uppercase"
           defaultValue={signUpDefaultValues.confirmPassword}
         />
         {state?.errors?.confirmPassword && (

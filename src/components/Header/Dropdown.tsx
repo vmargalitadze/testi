@@ -21,10 +21,10 @@ export default function DropdownMenuCheckboxes() {
   };
 
   return (
-    <div className="flex justify-center gap-2 items-center ">
+    <div className="flex  justify-start gap-2 items-start ">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <div className="flex items-center">
+          <div className="flex items-start">
             <Button
               className="relative cursor-pointer w-10 h-10 rounded-full ml-2 overflow-hidden p-0"
               variant="ghost"
@@ -38,11 +38,11 @@ export default function DropdownMenuCheckboxes() {
             </Button>
           </div>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-32" align="center" forceMount>
+        <DropdownMenuContent className="w-40" align="center" forceMount>
           <DropdownMenuItem>
             <Link
               href="/profile"
-              className="w-full flex justify-center items-center gap-2"
+              className="w-full text-[18px] flex justify-center items-center gap-2"
             >
               <FaUser /> User Profile
             </Link>
@@ -50,7 +50,7 @@ export default function DropdownMenuCheckboxes() {
           <DropdownMenuItem>
             <Link
               href="/cart"
-              className="w-full flex justify-center items-center gap-2"
+              className="w-full text-[18px] flex md:ml-2 items-center gap-2"
             >
               <FaShoppingCart /> Cart
             </Link>
@@ -61,7 +61,7 @@ export default function DropdownMenuCheckboxes() {
             <DropdownMenuItem>
               <Link
                 href="/new"
-                className="w-full flex justify-center items-center gap-2"
+                className="w-full text-[18px] flex md:ml-2 items-center gap-2"
               >
                 add new
               </Link>
@@ -74,7 +74,7 @@ export default function DropdownMenuCheckboxes() {
 
           <DropdownMenuItem>
             <Button
-              className="cursor-pointer justify-center mx-auto"
+              className="cursor-pointer text-[18px] justify-center mx-auto"
               onClick={handleSignOut}
             >
               <FaSignOutAlt /> Sign Out

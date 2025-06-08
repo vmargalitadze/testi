@@ -47,12 +47,12 @@ function Header() {
               {status === "authenticated" ? (
                 <DropdownMenuCheckboxes />
               ) : (
-                <Link href="/login" className="text-sm">
+                <Link href="/login" className="text-[18px]">
                   Login
                 </Link>
               )}
             </div>
-            <div className="hidden sm:block">
+            <div className="hidden  sm:block">
               <Toggle />
             </div>
           </div>
