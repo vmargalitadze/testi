@@ -17,7 +17,7 @@ const CartItemCard = ({ cartItem }: Props) => {
   };
 
   return (
-    <div className="flex items-center   -mx-8 px-6 py-5">
+    <div className="flex items-center text-black   -mx-8 px-6 py-5">
       <div className="flex w-2/5">
         <div className="w-20">
           <Link href={`/product/${cartItem.product.id}`}>

@@ -7,7 +7,6 @@ import { TotalPriceSelector } from "@/components/Slices/cartSlice";
 import { loadStripe } from "@stripe/stripe-js";
 import CartItemCard from "./CartItem";
 
-
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -57,11 +56,11 @@ function CartPage() {
       console.error("გადახდის შეცდომა:", error);
     }
   };
- 
+
   return (
     <div className="">
       <div className="container mx-auto mt-10">
-        <div className="flex shadow-md my-10">
+        <div className="flex bg-white text-black shadow-md my-10">
           <div className="w-3/4 px-10 py-10">
             <div className="flex justify-between border-b pb-8">
               <h1 className="font-semibold uppercase text-2xl">
@@ -88,23 +87,25 @@ function CartPage() {
             ))}
             <Link
               href="/"
-              className="inline-flex  items-center border  px-3 py-1.5 rounded-md  hover:bg-indigo-50"
+              className="inline-flex items-center border px-3 py-1.5 rounded-md group"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                className="h-6 w-6"
+                className="h-6 w-6 group-hover:text-amber-400 transition-colors"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M7 16l-4-4m0 0l4-4m-4 4h18"
-                ></path>
+                />
               </svg>
-              <span className="ml-1 font-bold uppercase text-[18px]">Back</span>
+              <span className="ml-1 font-bold uppercase text-[18px] group-hover:text-amber-400 transition-colors">
+                Back
+              </span>
             </Link>
           </div>
 
