@@ -19,7 +19,7 @@ async function Page() {
   return (
     <>
       <div className="p-8">
-        <div className="container mx-auto min-h-screen">
+        <div className="container mx-auto h-[80vh]">
           <h1 className="text-2xl uppercase text-black lg:text-4xl 2xl:text-6xl font-bold  mb-6 ">
             User
           </h1>
