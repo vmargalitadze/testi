@@ -35,14 +35,16 @@ async function Page() {
 
             <div className="flex-1 flex flex-col gap-y-5 justify-start">
               <p className="text-[16px] lg:text-[24px] leading-tight text-start ">
-                <span className="uppercase">NAME:</span>
-                {session.user.firstName || "უცნობია"}
+                <span className="uppercase font-bold">NAME:</span>
+              {" "}  {session.user.firstName || "უცნობია"}
               </p>
               <p className="text-[16px] lg:text-[24px] leading-tight text-start ">
-                SURNAME: {session.user.lastName || "უცნობია"}
+                <span className="uppercase font-bold">LAST NAME:</span>
+                {" "} {session.user.lastName || "უცნობია"}
               </p>
               <p className="text-[16px]  lg:text-[24px] leading-tight text-start ">
-                EMAIL: {session.user.email || "უცნობია"}
+                <span className="uppercase font-bold">EMAIL:</span>
+              {" "}  {session.user.email || "უცნობია"}
               </p>
             </div>
           </div>

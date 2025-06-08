@@ -6,7 +6,7 @@ function page() {
       <div className="pt-[70px] rounded-md  pb-[70px]">
         <div className="container">
           <div className="max-w-[1720px] mx-auto grid grid-cols-1 lg:grid-cols-2 ">
-            <div className="md:w-[550px] w-full  md:h-full h-[400px]  relative">
+            <div className="md:w-[550px] w-full  md:h-full h-[200px]  relative">
               <Image
                 fill
                 className=" rounded-md"
