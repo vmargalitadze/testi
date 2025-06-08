@@ -5,8 +5,8 @@ function page() {
     <>
       <div className="mt-[40px] rounded-md pb-[70px]">
         <div className="container">
-          <div className="max-w-[1720px] mx-auto grid grid-cols-1 lg:grid-cols-2">
-            {/* Image container */}
+          <div className="max-w-[1720px] gap-3 mx-auto grid grid-cols-1 lg:grid-cols-2">
+         
             <div className="relative w-full h-[550px]  ">
               <Image
                 src="/slider/1.jpg"
@@ -16,7 +16,7 @@ function page() {
               />
             </div>
 
-            {/* Text content */}
+          
             <div className="py-8 rounded-md sm:py-12 px-5 sm:px-12 md:px-8 lg:pr-12 lg:pl-16 2xl:pl-[160px] bg-[#F8F8F9]">
               <div className="lg:max-w-[600px] rounded-3xl text-center">
                 <h3 className="font-medium leading-none text-2xl md:text-3xl">
