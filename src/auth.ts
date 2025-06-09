@@ -16,7 +16,7 @@ declare module "next-auth" {
       role: string;
       firstName: string;
       lastName: string;
-    } & DefaultSession["user"]
+    } & DefaultSession["user"];
   }
 
   interface User {
@@ -41,7 +41,7 @@ export const config = {
   adapter: PrismaAdapter(prisma),
   session: {
     strategy: "jwt",
-    maxAge: 30 * 24 * 60 * 60,
+    maxAge: 60 * 60,
   },
   providers: [
     CredentialsProvider({
